@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ABHIRUCHI FOOD</title>
+<title>ABHIRUCHI FOOD - Full Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{font-family:Arial;margin:0;background:#fff7f0}
-.header{background:#ff5722;color:white;padding:15px;text-align:center;font-size:24px;font-weight:bold}
+.header{background:#ff5722;color:white;padding:15px;text-align:center;font-size:24px;font-weight:bold;position:sticky;top:0}
 .card{background:white;margin:15px;padding:15px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
 .card img{width:100%;border-radius:10px;margin-bottom:10px}
 .res-name{color:#d32f2f;font-size:18px;font-weight:bold}
@@ -12,6 +13,8 @@ body{font-family:Arial;margin:0;background:#fff7f0}
 .btn{width:100%;padding:12px;margin:6px 0;border:none;border-radius:8px;font-size:15px;font-weight:bold;cursor:pointer}
 .cod{background:#25d366;color:white}
 .pay{background:#673AB7;color:white}
+.section{background:#ff5722;color:white;text-align:center;font-size:18px;font-weight:bold;margin:0;padding:10px}
+.menu-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #ddd}
 </style>
 </head>
 <body>
@@ -21,19 +24,23 @@ body{font-family:Arial;margin:0;background:#fff7f0}
 <!-- PARADISE -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800">
-<p class="res-name">PARADISE - KPHB Colony ⭐ 4.5</p>
+<p class="res-name">PARADISE - KPHB ⭐ 4.5</p>
 <p>⏰ 30-40min | 🚚 Raju</p>
-<h3>Chicken Family: ₹844 | Mutton Family: ₹1044</h3>
+<div class="menu-item"><span>Chicken Biryani Family</span><span>₹844</span></div>
+<div class="menu-item"><span>Mutton Biryani Family</span><span>₹1044</span></div>
 <button class="btn cod" onclick="window.open('https://wa.me/917386565234?text=Order%20from%20Paradise')">📱 Order COD</button>
+<button class="btn pay" onclick="window.open('upi://pay?pa=abhilashkalluri1@ibl&pn=AbhiruchiFood&am=844')">💳 Pay Online</button>
 </div>
 
 <!-- BAWARCHI -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1631515242808-497c3fbd3972?w=800">
-<p class="res-name">BAWARCHI - RTC X Roads ⭐ 4.3</p>
+<p class="res-name">BAWARCHI - RTC ⭐ 4.3</p>
 <p>⏰ 35-45min | 🚚 Suresh</p>
-<h3>Chicken Family: ₹820 | Mutton Family: ₹1020</h3>
+<div class="menu-item"><span>Chicken Biryani Family</span><span>₹820</span></div>
+<div class="menu-item"><span>Mutton Biryani Family</span><span>₹1020</span></div>
 <button class="btn cod" onclick="window.open('https://wa.me/917386565234?text=Order%20from%20Bawarchi')">📱 Order COD</button>
+<button class="btn pay" onclick="window.open('upi://pay?pa=abhilashkalluri1@ibl&pn=AbhiruchiFood&am=820')">💳 Pay Online</button>
 </div>
 
 <!-- MEGHANA -->
@@ -41,9 +48,35 @@ body{font-family:Arial;margin:0;background:#fff7f0}
 <img src="https://images.unsplash.com/photo-1633321702518-7feccafb94af?w=800">
 <p class="res-name">MEGHANA FOODS - Bodhan ⭐ 4.6</p>
 <p>⏰ 25-35min | 🚚 Kiran</p>
-<h3>Chicken Family: ₹799 | Paneer Family: ₹749</h3>
+<div class="menu-item"><span>Chicken Biryani Family</span><span>₹799</span></div>
+<div class="menu-item"><span>Paneer Biryani Family</span><span>₹749</span></div>
 <button class="btn cod" onclick="window.open('https://wa.me/917386565234?text=Order%20from%20Meghana')">📱 Order COD</button>
+<button class="btn pay" onclick="window.open('upi://pay?pa=abhilashkalluri1@ibl&pn=AbhiruchiFood&am=799')">💳 Pay Online</button>
 </div>
 
-</body>
-</html>
+<!-- SHADAB -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800">
+<p class="res-name">SHADAB - Madina ⭐ 4.4</p>
+<p>⏰ 40-50min | 🚚 Imran</p>
+<div class="menu-item"><span>Chicken Biryani Family</span><span>₹829</span></div>
+<div class="menu-item"><span>Mutton Biryani Family</span><span>₹1049</span></div>
+<div class="menu-item"><span>Haleem</span><span>₹199</span></div>
+<button class="btn cod" onclick="window.open('https://wa.me/917386565234?text=Order%20from%20Shadab')">📱 Order COD</button>
+</div>
+
+<!-- CAFE BAHAR -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800">
+<p class="res-name">CAFE BAHAR - Basheerbagh ⭐ 4.5</p>
+<p>⏰ 35-45min | 🚚 Rafi</p>
+<div class="menu-item"><span>Chicken Biryani Family</span><span>₹849</span></div>
+<div class="menu-item"><span>Paneer Biryani Family</span><span>₹769</span></div>
+<button class="btn cod" onclick="window.open('https://wa.me/917386565234?text=Order%20from%20Cafe%20Bahar')">📱 Order COD</button>
+</div>
+
+<div class="section">🐟 FISH & SEAFOOD SPECIAL</div>
+
+<!-- FISH -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-159902141
