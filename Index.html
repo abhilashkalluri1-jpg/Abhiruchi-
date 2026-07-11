@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abhiruchi Food</title>
+<style>
+body{font-family:Arial;background:#fff8f0;margin:0}
+header{background:#ff5722;color:white;padding:20px;text-align:center;font-size:28px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px}
+.item{background:white;border-radius:15px;padding:15px;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+.price{color:#ff5722;font-weight:bold;font-size:20px}
+button{background:#ff5722;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer}
+#cart{background:white;padding:20px;margin:20px;border-radius:15px}
+</style>
+</head>
+<body>
+<header>🍽️ ABHIRUCHI FOOD</header>
+<div class="menu">
+<div class="item"><h3>Chicken Biryani</h3><p class="price">₹180</p><button onclick="add('Chicken Biryani',180)">Add</button></div>
+<div class="item"><h3>Cheese Pizza</h3><p class="price">₹250</p><button onclick="add('Cheese Pizza',250)">Add</button></div>
+<div class="item"><h3>Chicken Burger</h3><p class="price">₹120</p><button onclick="add('Chicken Burger',120)">Add</button></div>
+</div>
+<div id="cart"><h2>🛒 Cart</h2><div id="cart-items">Empty</div><button onclick="order()">Order on WhatsApp</button></div>
+<script>
+let cart=[]; 
+function add(n,p){cart.push({n,p});show()}
+function show(){document.getElementById("cart-items").innerHTML=cart.map(i=>i.n+" - ₹"+i.p).join("<br>")}
+function order(){let msg="Order:\n"+cart.map(i=>i.n).join("\n");window.open("https://wa.me/91XXXXXXXXXX?text="+msg)}
+</script>
+</body>
+</html>
