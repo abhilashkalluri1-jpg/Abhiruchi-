@@ -6,6 +6,7 @@
 <style>
 body{margin:0;background:#f5f5f5;font-family:Arial}
 header{background:#ff5722;color:white;text-align:center;padding:15px;font-size:22px;font-weight:bold}
+#search{width:90%;margin:10px auto;display:block;padding:12px;border:2px solid #ff5722;border-radius:25px;font-size:15px;outline:none}
 .btns{display:flex;gap:10px;justify-content:center;padding:15px;background:white}
 .btns button{padding:10px 20px;border:0;border-radius:20px;background:#eee;font-weight:bold;font-size:15px}
 .btns .active{background:#ff5722;color:white}
@@ -25,6 +26,7 @@ footer{text-align:center;padding:15px;color:#777;font-size:12px}
 </head>
 <body>
 <header>🍽️ ABHIRUCHI FOOD</header>
+<input type="text" id="search" placeholder="🔍 Search for Biryani, Pizza, Chicken..." onkeyup="search()">
 <div class="btns">
 <button class="active" onclick="s('h',this)">HYDERABAD</button>
 <button onclick="s('b',this)">BENGALURU</button>
@@ -118,6 +120,7 @@ footer{text-align:center;padding:15px;color:#777;font-size:12px}
 <script>
 function s(c,b){document.getElementById('h').style.display=c=='h'?'block':'none';document.getElementById('b').style.display=c=='b'?'block':'none';document.querySelectorAll('.btns button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}
 function o(n){window.open('https://wa.me/917386565234?text='+encodeURIComponent('Hi '+n+'! Abhiruchi Food nunchi order kavali'))}
+function search(){let i=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(i)?'block':'none'})}
 </script>
 </body>
-
+</html>
