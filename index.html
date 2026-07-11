@@ -10,7 +10,10 @@ header{background:#ff5722;color:white;text-align:center;padding:15px;font-size:2
 .btns button{padding:10px 20px;border:0;border-radius:20px;background:#eee;font-weight:bold;font-size:15px}
 .btns .active{background:#ff5722;color:white}
 .card{background:white;margin:12px;padding:15px;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
-.card h3{color:#ff572
+.card h3{color:#ff5722;margin:0}
+.card p{color:#555;margin:5px 0;font-size:14px}
+.card a{color:#1976D2;text-decoration:none;font-weight:bold}
+.btn{background:#25D366;color:white;border:0;padding:12px;width:100%;border-radius:8px;margin-top:10px;font-weight:bold;font-size:15px}
 </style>
 </head>
 <body>
@@ -20,14 +23,14 @@ header{background:#ff5722;color:white;text-align:center;padding:15px;font-size:2
 <button onclick="s('b',this)">BENGALURU</button>
 </div>
 <div id="h">
-<div class="card"><h3>PARADISE</h3><p>📍 KPHB</p><p>⏰ 30-40min | ⭐4.5</p><button class="btn" onclick="o('Paradise')">Order on WhatsApp</button></div>
-<div class="card"><h3>DOMINO'S</h3><p>📍 Gachibowli</p><p>⏰ 25-35min | ⭐4.3</p><button class="btn" onclick="o('Domino')">Order on WhatsApp</button></div>
-<div class="card"><h3>BAWARCHI</h3><p>📍 RTC</p><p>⏰ 35-45min | ⭐4.4</p><button class="btn" onclick="o('Bawarchi')">Order on WhatsApp</button></div>
+<div class="card"><h3>PARADISE</h3><p><a href="https://maps.google.com/?q=Paradise+KPHB+Hyderabad" target="_blank">📍 KPHB</a></p><p>⏰ 30-40min | ⭐4.5</p><button class="btn" onclick="o('Paradise')">Order on WhatsApp</button></div>
+<div class="card"><h3>DOMINO'S</h3><p><a href="https://maps.google.com/?q=Dominos+Gachibowli+Hyderabad" target="_blank">📍 Gachibowli</a></p><p>⏰ 25-35min | ⭐4.3</p><button class="btn" onclick="o('Domino')">Order on WhatsApp</button></div>
+<div class="card"><h3>BAWARCHI</h3><p><a href="https://maps.google.com/?q=Bawarchi+RTC+Hyderabad" target="_blank">📍 RTC</a></p><p>⏰ 35-45min | ⭐4.4</p><button class="btn" onclick="o('Bawarchi')">Order on WhatsApp</button></div>
 </div>
 <div id="b" style="display:none">
-<div class="card"><h3>EMPIRE</h3><p>📍 Koramangala</p><p>⏰ 30-45min | ⭐4.6</p><button class="btn" onclick="o('Empire')">Order on WhatsApp</button></div>
-<div class="card"><h3>BIRYANI ZONE</h3><p>📍 Indiranagar</p><p>⏰ 25-35min | ⭐4.2</p><button class="btn" onclick="o('Biryani')">Order on WhatsApp</button></div>
-<div class="card"><h3>MEGHANA</h3><p>📍 Jayanagar</p><p>⏰ 35-50min | ⭐4.5</p><button class="btn" onclick="o('Meghana')">Order on WhatsApp</button></div>
+<div class="card"><h3>EMPIRE</h3><p><a href="https://maps.google.com/?q=Empire+Koramangala+Bangalore" target="_blank">📍 Koramangala</a></p><p>⏰ 30-45min | ⭐4.6</p><button class="btn" onclick="o('Empire')">Order on WhatsApp</button></div>
+<div class="card"><h3>BIRYANI ZONE</h3><p><a href="https://maps.google.com/?q=Biryani+Zone+Indiranagar+Bangalore" target="_blank">📍 Indiranagar</a></p><p>⏰ 25-35min | ⭐4.2</p><button class="btn" onclick="o('Biryani')">Order on WhatsApp</button></div>
+<div class="card"><h3>MEGHANA</h3><p><a href="https://maps.google.com/?q=Meghana+Jayanagar+Bangalore" target="_blank">📍 Jayanagar</a></p><p>⏰ 35-50min | ⭐4.5</p><button class="btn" onclick="o('Meghana')">Order on WhatsApp</button></div>
 </div>
 <script>
 function s(c,b){document.getElementById('h').style.display=c=='h'?'block':'none';document.getElementById('b').style.display=c=='b'?'block':'none';document.querySelectorAll('.btns button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}
