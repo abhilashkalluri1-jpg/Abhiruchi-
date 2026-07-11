@@ -1,22 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abhiruchi Food</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;background:#f5f5f5;font-family:Arial}
+header{background:#ff5722;color:white;text-align:center;padding:15px;font-size:22px;font-weight:bold}
+.card{background:white;margin:12px;padding:15px;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+.card h3{color:#ff5722;margin:0 0 5px 0}
+.loc{color:#1976d2;text-decoration:none;font-weight:bold;font-size:14px}
+.time{color:#777;font-size:13px}
+.boy{color:#25d366;font-size:13px;font-weight:bold}
+.pack{background:#fff3e0;padding:10px;border-radius:8px;margin:8px 0}
+.pack h4{margin:0 0 5px 0;color:#e65100;font-size:14px}
+.pack p{display:flex;justify-content:space-between;margin:5px 0;font-size:14px}
+.btn{background:#25d366;color:white;border:0;padding:12px;width:100%;border-radius:8px;margin-top:8px;font-weight:bold;font-size:15px}
+.btn-pay{background:#673AB7;color:white;border:0;padding:12px;width:100%;border-radius:8px;margin-top:6px;font-weight:bold;font-size:15px}
+</style>
+</head>
+<body>
+<header>🍗 ABHIRUCHI FOOD</header>
+
 <div class="card">
 <h3>PARADISE</h3>
 <a class="loc" href="https://maps.google.com/?q=Paradise+KPHB+Hyderabad" target="_blank">📍 KPHB Colony</a>
-<p class="time">⏰ 30-40min | ⭐4.5</p>
-<p class="boy">🏍️ Delivery Partner: Raju</p>
-<div class="menu">
+<p class="time">⏰ 30-40min | ⭐ 4.5</p>
+<p class="boy">🚚 Delivery Partner: Raju</p>
+
 <div class="pack">
 <h4>🍗 CHICKEN BIRYANI PACKS</h4>
-<p>Single Pack 1 Person <span>₹244 + ₹30 = ₹274</span></p>
-<p>Mini Pack 2 Persons <span>₹444 + ₹30 = ₹474</span></p>
-<p>Family Pack 4 Persons <span>₹814 + ₹30 = ₹844</span></p>
+<p><span>Single Pack 1 Person</span><span>₹244 + ₹30 = ₹274</span></p>
+<p><span>Mini Pack 2 Persons</span><span>₹444 + ₹30 = ₹474</span></p>
+<p><span>Family Pack 4 Persons</span><span>₹814 + ₹30 = ₹844</span></p>
 <button class="btn" onclick="o('Paradise Family Pack Chicken Biryani','844','919876543210')">📱 Order Family Pack COD ₹844</button>
 <button class="btn-pay" onclick="pay('Paradise Family Pack','844')">💳 Pay ₹844 Online</button>
 </div>
-<div class="pack">
-<h4>🍖 MUTTON BIRYANI PACKS</h4>
-<p>Single Pack <span>₹294 + ₹30 = ₹324</span></p>
-<p>Family Pack <span>₹1014 + ₹30 = ₹1044</span></p>
+</div>
+
+<div class="card">
+<h3>🍖 MUTTON BIRYANI PACKS</h3>
+<p><span>Single Pack</span><span>₹294 + ₹30 = ₹324</span></p>
+<p><span>Family Pack</span><span>₹1014 + ₹30 = ₹1044</span></p>
 <button class="btn" onclick="o('Paradise Family Pack Mutton Biryani','1044','919876543210')">📱 Order Mutton Family COD ₹1044</button>
 <button class="btn-pay" onclick="pay('Paradise Mutton Family','1044')">💳 Pay ₹1044 Online</button>
 </div>
-</div>
+
+<footer style="text-align:center;padding:15px;color:#777">© 2026 Abhiruchi Food</footer>
+
+<script>
+function o(item,amt,p){
+  var msg = 'Hi Anna! Abhiruchi Food nunchi order: '+item+'. Total Amount: ₹'+amt+'. My Delivery Address: ';
+  window.open('https://wa.me/'+p+'?text='+encodeURIComponent(msg),'_blank');
+}
+function pay(item,amt){
+  var upi = 'upi://pay?pa=abhilashkalluri1@ibl&pn=AbhiruchiFood&am='+amt+'&tn='+encodeURIComponent(item);
+  window.location.href = upi;
+}
+</script>
+</body>
+</html>
