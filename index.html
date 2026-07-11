@@ -4,11 +4,11 @@
 <title>Abhiruchi Food</title>
 <style>
 body{font-family:Arial;background:#fff8f0;margin:0}
-header{background:#ff5722;color:white;padding:20px;text-align:center;font-size:28px}
+header{background:#ff5722;color:white;padding:20px;text-align:center;font-size:24px;font-weight:bold}
 .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px}
-.item{background:white;border-radius:15px;padding:15px;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
-.price{color:#ff5722;font-weight:bold;font-size:20px}
-button{background:#ff5722;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer}
+.item{background:white;border-radius:15px;padding:15px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+.price{color:#ff5722;font-weight:bold;font-size:18px}
+button{background:#ff5722;color:white;border:none;padding:10px 15px;border-radius:8px;cursor:pointer;width:100%;margin-top:10px}
 #cart{background:white;padding:20px;margin:20px;border-radius:15px}
 </style>
 </head>
@@ -19,12 +19,12 @@ button{background:#ff5722;color:white;border:none;padding:10px 20px;border-radiu
 <div class="item"><h3>Cheese Pizza</h3><p class="price">₹250</p><button onclick="add('Cheese Pizza',250)">Add</button></div>
 <div class="item"><h3>Chicken Burger</h3><p class="price">₹120</p><button onclick="add('Chicken Burger',120)">Add</button></div>
 </div>
-<div id="cart"><h2>🛒 Cart</h2><div id="cart-items">Empty</div><button onclick="order()">Order on WhatsApp</button></div>
+<div id="cart"><h2>🛒 Cart</h2><div id="cart-items">Empty</div><button onclick="orderWhatsApp()">Order on WhatsApp</button></div>
 <script>
-let cart=[]; 
+let cart=[];
 function add(n,p){cart.push({n,p});show()}
-function show(){document.getElementById("cart-items").innerHTML=cart.map(i=>i.n+" - ₹"+i.p).join("<br>")}
-function order(){let msg="Order:\n"+cart.map(i=>i.n).join("\n");window.open("https://wa.me/91XXXXXXXXXX?text="+msg)}
+function show(){let d=document.getElementById("cart-items");d.innerHTML=cart.length?cart.map(i=>i.n+" - ₹"+i.p).join("<br>"):"Empty"}
+function orderWhatsApp(){let phone="917386565234";let msg="Hello Abhiruchi Food! Nenu ee items order chesthunna:\n"+cart.map(i=>i.n+" - ₹"+i.p).join("\n")+"\n\nTotal: ₹"+cart.reduce((a,b)=>a+b.p,0)+"\n\nName:\nAddress:";window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg),'_blank')}
 </script>
 </body>
 </html>
