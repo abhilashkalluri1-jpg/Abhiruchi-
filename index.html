@@ -1,134 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Abhiruchi Food</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-body{margin:0;background:#f5f5f5;font-family:Arial}
-header{background:#ff5722;color:white;text-align:center;padding:15px;font-size:22px;font-weight:bold}
-#search{width:90%;margin:10px auto;display:block;padding:12px;border:2px solid #ff5722;border-radius:25px;font-size:15px;outline:none}
-.btns{display:flex;gap:10px;justify-content:center;padding:15px;background:white}
-.btns button{padding:10px 20px;border:0;border-radius:20px;background:#eee;font-weight:bold;font-size:15px}
-.btns .active{background:#ff5722;color:white}
-.card{background:white;margin:12px;padding:15px;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
-.card h3{color:#ff5722;margin:0 0 5px 0}
-.card .loc{color:#1976D2;text-decoration:none;font-weight:bold;font-size:14px}
-.card .time{color:#777;font-size:13px;margin:5px 0}
-.card .boy{color:#25D366;font-size:13px;font-weight:bold;margin:5px 0}
-.menu{margin:10px 0;border-top:1px solid #eee;padding-top:10px}
-.menu p{display:flex;justify-content:space-between;margin:6px 0;font-size:14px}
-.menu span{color:#000;font-weight:bold}
-.btn{background:#25D366;color:white;border:0;padding:12px;width:100%;border-radius:8px;margin-top:10px;font-weight:bold;font-size:15px}
-.delivery{background:white;margin:12px;padding:15px;border-radius:12px;text-align:center}
-.delivery h3{color:#ff5722}
-.delivery a{display:inline-block;margin:8px;padding:10px 15px;background:#eee;border-radius:8px;text-decoration:none;color:#000;font-weight:bold}
-footer{text-align:center;padding:15px;color:#777;font-size:12px}
-</style>
-</head>
-<body>
-<header>🍽️ ABHIRUCHI FOOD</header>
-<input type="text" id="search" placeholder="🔍 Search for Biryani, Pizza, Chicken..." onkeyup="search()">
-<div class="btns">
-<button class="active" onclick="s('h',this)">HYDERABAD</button>
-<button onclick="s('b',this)">BENGALURU</button>
-</div>
-
-<div id
-  <div id="h">
 <div class="card">
 <h3>PARADISE</h3>
-<a class="loc" href="https://maps.google.com/?q=Paradise+KPHB+Hyderabad" target="_blank">📍 KPHB</a>
+<a class="loc" href="https://maps.google.com/?q=Paradise+KPHB+Hyderabad" target="_blank">📍 KPHB Colony</a>
 <p class="time">⏰ 30-40min | ⭐4.5</p>
-<p class="boy">🏍️ Delivery Boy: Raju</p>
+<p class="boy">🏍️ Delivery Partner: Raju</p>
 <div class="menu">
-<p>Biryani Chicken <span>₹299</span></p>
-<p>Biryani Mutton <span>₹349</span></p>
-<p>Chicken 65 <span>₹189</span></p>
+<div class="pack">
+<h4>🍗 CHICKEN BIRYANI PACKS</h4>
+<p>Single Pack 1 Person <span>₹244 + ₹30 = ₹274</span></p>
+<p>Mini Pack 2 Persons <span>₹444 + ₹30 = ₹474</span></p>
+<p>Family Pack 4 Persons <span>₹814 + ₹30 = ₹844</span></p>
+<button class="btn" onclick="o('Paradise Family Pack Chicken Biryani','844','919876543210')">📱 Order Family Pack COD ₹844</button>
+<button class="btn-pay" onclick="pay('Paradise Family Pack','844')">💳 Pay ₹844 Online</button>
 </div>
-<button class="btn" onclick="o('Paradise','919876543210')">Order on WhatsApp</button>
-</div>
-
-<div class="card">
-<h3>DOMINO'S</h3>
-<a class="loc" href="https://maps.google.com/?q=Dominos+Gachibowli+Hyderabad" target="_blank">📍 Gachibowli</a>
-<p class="time">⏰ 25-35min | ⭐4.3</p>
-<p class="boy">🏍️ Delivery Boy: Suresh</p>
-<div class="menu">
-<p>Margherita Pizza <span>₹199</span></p>
-<p>Pepperoni Pizza <span>₹299</span></p>
-<p>Garlic Bread <span>₹149</span></p>
-</div>
-<button class="btn" onclick="o('Domino','919876543211')">Order on WhatsApp</button>
-</div>
-
-<div class="card">
-<h3>BAWARCHI</h3>
-<a class="loc" href="https://maps.google.com/?q=Bawarchi+RTC+Hyderabad" target="_blank">📍 RTC</a>
-<p class="time">⏰ 35-45min | ⭐4.4</p>
-<p class="boy">🏍️ Delivery Boy: Kumar</p>
-<div class="menu">
-<p>Chicken Biryani <span>₹280</span></p>
-<p>Mutton Biryani <span>₹320</span></p>
-<p>Kebabs <span>₹199</span></p>
-</div>
-<button class="btn" onclick="o('Bawarchi','919876543212')">Order on WhatsApp</button>
+<div class="pack">
+<h4>🍖 MUTTON BIRYANI PACKS</h4>
+<p>Single Pack <span>₹294 + ₹30 = ₹324</span></p>
+<p>Family Pack <span>₹1014 + ₹30 = ₹1044</span></p>
+<button class="btn" onclick="o('Paradise Family Pack Mutton Biryani','1044','919876543210')">📱 Order Mutton Family COD ₹1044</button>
+<button class="btn-pay" onclick="pay('Paradise Mutton Family','1044')">💳 Pay ₹1044 Online</button>
 </div>
 </div>
-
-<div id="b" style="display:none">
-<div class="card">
-<h3>EMPIRE</h3>
-<a class="loc" href="https://maps.google.com/?q=Empire+Koramangala+Bangalore" target="_blank">📍 Koramangala</a>
-<p class="time">⏰ 30-45min | ⭐4.6</p>
-<p class="boy">🏍️ Delivery Boy: Venkat</p>
-<div class="menu">
-<p>Chicken Biryani <span>₹270</span></p>
-<p>Butter Chicken <span>₹250</span></p>
-<p>Naan <span>₹40</span></p>
-</div>
-<button class="btn" onclick="o('Empire','919876543213')">Order on WhatsApp</button>
-</div>
-
-<div class="card">
-<h3>BIRYANI<h3>BIRYANI ZONE</h3>
-<a class="loc" href="https://maps.google.com/?q=Biryani+Zone+Indiranagar+Bangalore" target="_blank">📍 Indiranagar</a>
-<p class="time">⏰ 25-35min | ⭐4.2</p>
-<p class="boy">🏍️ Delivery Boy: Arjun</p>
-<div class="menu">
-<p>Hyderabadi Biryani <span>₹260</span></p>
-<p>Veg Biryani <span>₹180</span></p>
-<p>Raita <span>₹50</span></p>
-</div>
-<button class="btn" onclick="o('Biryani','919876543214')">Order on WhatsApp</button>
-</div>
-
-<div class="card">
-<h3>MEGHANA</h3>
-<a class="loc" href="https://maps.google.com/?q=Meghana+Jayanagar+Bangalore" target="_blank">📍 Jayanagar</a>
-<p class="time">⏰ 35-50min | ⭐4.5</p>
-<p class="boy">🏍️ Delivery Boy: Pradeep</p>
-<div class="menu">
-<p>Chicken Biryani <span>₹290</span></p>
-<p>Ghee Rice <span>₹150</span></p>
-<p>Chicken Curry <span>₹220</span></p>
-</div>
-<button class="btn" onclick="o('Meghana','919876543215')">Order on WhatsApp</button>
-</div>
-</div>
-
-<div class="delivery">
-<h3>🚚 DELIVERY PARTNERS</h3>
-<a href="https://www.zomato.com" target="_blank">Zomato</a>
-<a href="https://www.swiggy.com" target="_blank">Swiggy</a>
-<a href="https://www.dunzo.com" target="_blank">Dunzo</a>
-</div>
-
-<footer>© 2026 Abhiruchi Food | Made with ❤️</footer>
-
-<script>
-function s(c,b){document.getElementById('h').style.display=c=='h'?'block':'none';document.getElementById('b').style.display=c=='b'?'block':'none';document.querySelectorAll('.btns button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}
-function o(n,p){window.open('https://wa.me/'+p+'?text='+encodeURIComponent('Hi Anna! '+n+' restaurant nunchi Abhiruchi Food dwara order kavali. My Address: '))}
-function search(){let i=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=c.innerText.toLowerCase().includes(i)?'block':'none'})}
-</script>
-</body>
-</html>
